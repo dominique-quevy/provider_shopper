@@ -5,16 +5,29 @@
 import 'dart:io' show Platform;
 
 import 'package:flutter/foundation.dart' show kIsWeb;
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart'
+    show
+        MaterialApp,
+        runApp,
+        Widget,
+        WidgetsFlutterBinding,
+        BuildContext,
+        Size,
+        Rect,
+        StatelessWidget;
 import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
+
 import 'package:provider_shopper/common/theme.dart';
+
 import 'package:provider_shopper/models/cart.dart';
 import 'package:provider_shopper/models/catalog.dart';
+
 import 'package:provider_shopper/screens/cart.dart';
 import 'package:provider_shopper/screens/catalog.dart';
 import 'package:provider_shopper/screens/login.dart';
-import 'package:window_size/window_size.dart';
+
+//import 'package:window_size/window_size.dart';
 
 void main() {
   setupWindow();
