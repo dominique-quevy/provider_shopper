@@ -12,11 +12,29 @@ import 'package:flutter/material.dart'
         Widget,
         WidgetsFlutterBinding,
         BuildContext,
+        /*
         Size,
         Rect,
+        */
         StatelessWidget;
-import 'package:go_router/go_router.dart';
-import 'package:provider/provider.dart';
+import 'package:go_router/go_router.dart' show GoRouter, GoRoute;
+import 'package:provider/provider.dart'
+    show Provider, ChangeNotifierProxyProvider, MultiProvider;
+/*
+        https://pub.dev/documentation/provider/latest/provider/Provider-class.html
+         
+        Provider<T> class
+          A Provider that manages the lifecycle of the value it provides
+          by delegating to a pair of Create and Dispose.
+
+          It is usually used to avoid making a StatefulWidget for something trivial,
+          such as instantiating a BLoC.
+
+          Provider is the equivalent of a State.initState combined with State.dispose.
+          Create is called only once in State.initState. 
+          We cannot use InheritedWidget as it requires the value
+          to be constructor-initialized and final.
+*/
 
 import 'package:provider_shopper/common/theme.dart';
 
@@ -27,7 +45,19 @@ import 'package:provider_shopper/screens/cart.dart';
 import 'package:provider_shopper/screens/catalog.dart';
 import 'package:provider_shopper/screens/login.dart';
 
-//import 'package:window_size/window_size.dart';
+/*
+import 'package:window_size/window_size.dart';
+  //Desktop Embedding for Flutter
+  //https://github.com/google/flutter-desktop-embedding
+  //This project was originally created to develop Windows, macOS, and Linux embeddings of Flutter.
+  //That work has since become part of Flutter, and all that remains here are experimental,
+  //early-stage desktop plugins.
+  //If you want to get started with Flutter on desktop, 
+  //the place to start is now the Flutter documentation, 
+  //rather than this project. 
+  //You will already need to have followed the instructions there to get an application 
+  //running on desktop before using any of the plugins here.
+*/
 
 void main() {
   setupWindow();
@@ -40,6 +70,7 @@ const double windowHeight = 800;
 void setupWindow() {
   if (!kIsWeb && (Platform.isWindows || Platform.isLinux || Platform.isMacOS)) {
     WidgetsFlutterBinding.ensureInitialized();
+    /*
     setWindowTitle('Provider Demo');
     setWindowMinSize(const Size(windowWidth, windowHeight));
     setWindowMaxSize(const Size(windowWidth, windowHeight));
@@ -50,6 +81,7 @@ void setupWindow() {
         height: windowHeight,
       ));
     });
+    */
   }
 }
 
