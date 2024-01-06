@@ -1,19 +1,23 @@
 name: provider_shopper
-description: A new Flutter project.
+description: A shopping app sample that uses Provider for state management.
+publish_to: none
 
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.19.0 <4.0.0"
+  sdk: ">=2.19.0 <4.0.0" #^3.2.0
 
 dependencies:
   flutter:
     sdk: flutter
+  go_router: ^13.0.0
+  provider: ^6.1.1 #^6.0.2
+
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^2.0.2
+  flutter_lints: ^3.0.1 #^2.0.2
 
 flutter:
   uses-material-design: true
@@ -31,3 +35,8 @@ flutter:
   #       - asset: fonts/TrajanPro.ttf
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
+  fonts:
+    - family: Corben
+      fonts:
+        - asset: fonts/Corben/Corben-Bold.ttf
+          weight: 700

@@ -2,10 +2,11 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart'
+    show Colors, Brightness, FontWeight, TextStyle, TextTheme, ThemeData;
 
 final appTheme = ThemeData(
-  colorSchemeSeed: Colors.yellow,
+  colorSchemeSeed: Colors.deepPurple,
   brightness: Brightness.dark,
   useMaterial3: true,
   textTheme: const TextTheme(
@@ -13,7 +14,7 @@ final appTheme = ThemeData(
       fontFamily: 'Corben',
       fontWeight: FontWeight.w700,
       fontSize: 24,
-      color: Colors.black,
+      color: Colors.black12,
     ),
   ),
 );
