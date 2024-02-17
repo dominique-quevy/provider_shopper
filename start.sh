@@ -26,6 +26,7 @@ then
     cd /workspaces/provider_shopper
     dart pub get
     flutter pub get
+    dart --disable-analytics
     flutter config --enable-web
 fi
 echo "-----"
